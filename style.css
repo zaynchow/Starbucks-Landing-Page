@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');
+
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+content {
+    width: 100%;
+    z-index: -1;
+
+}
+
+.menu {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    
+}
+
+.menu li {
+    margin-left: 20px;
+    font-size: 1.2em;
+    cursor: pointer;  
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.textBox {
+    width: 50%;
+    padding-left: 10%;
+    padding-top: 2%;
+}
+
+.textBox h2 {
+    font-weight: 500;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.textBox h2 span {
+    color: #017143;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.imageBox {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.imageBox img{
+    position: relative;
+    max-width: 350px;
+    animation: anim 3s forwards;
+}
+
+#btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #017143;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.circle {
+    position: absolute;
+    background-color: #017143;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(600px at right bottom);
+    z-index: -2;
+
+}
+
+.thumbs {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    padding-bottom: 20px;
+    transform: translate(-50%);
+
+}
+
+.thumbs img {
+    cursor: pointer;
+    margin-left: 50px;
+    max-width: 70px;
+    
+
+}
+
+.animated {
+    animation: anim 3s forwards;
+}
+
+
+
+@keyframes anim {
+    from {
+ 
+        max-width: 0px;
+    }
+    to {
+        
+       
+        max-width: 450px;
+
+    }
+}
+
+
+@media (max-width: 991px) {
+    .header {
+        padding: 20px;
+    }
+    .header a img{
+        max-width: 60px;
+    }
+
+    .header ul {
+        display: none;
+    }
+    
+    .main {
+        padding: 20px;
+    }
+
+    .content {
+     
+        flex-direction: column;
+    }
+
+    .textBox {
+       width: 100%;
+       padding: 0;
+       margin-top: 122px;
+    }
+
+    .textBox h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    .textBox p {
+        margin-bottom: 15px;
+    }
+
+    .content .imageBox {
+        max-width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+
+
+    .imageBox img {
+        animation: none;
+        max-width: 250px;
+        justify-content: center;
+        margin-top: -20px;
+        
+    }
+
+
+    .circle {
+        clip-path: circle(350px at center 800px);
+    }
+
+}
+
+
+
+
+
